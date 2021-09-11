@@ -61,8 +61,9 @@ def remove_node(node):
     Does not return anything; changes list in place.
     """
 
-
-
+    data = node.next.data   #keep track of the next node's data
+    node.data = data        #copy the next node's data onto yourself
+    node.next = node.next.next  #point yourself to the next node's next node
 
 
 
